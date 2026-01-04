@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog - SkyBloom.Boquet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .catalog-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #87CEEB;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .back-button:hover {
+            opacity: 0.7;
+        }
+
+        .catalog-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .catalog-header h2 {
+            font-size: 40px;
+            color: #87CEEB;
+            margin-bottom: 15px;
+        }
+
+        .catalog-header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .flower-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .flower-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .flower-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #B0E0E6 0%, #E0F6FF 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .flower-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .flower-info {
+            padding: 20px;
+        }
+
+        .flower-name {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .flower-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .flower-price {
+            font-size: 24px;
+            color: #87CEEB;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .buy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(135, 206, 235, 0.4);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .catalog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SkyBloom.Boquet</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="catalog.html">Katalog</a></li>
+                <li><a href="#" onclick="alert('Hubungi kami di WhatsApp: 08123456789')">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="catalog-section">
+        <a href="index.html" class="back-button">← Kembali ke Beranda</a>
+        
+        <div class="catalog-header">
+            <h2>Katalog Bunga</h2>
+            <p>Pilih rangkaian bunga favorit Anda</p>
+        </div>
+
+        <div class="catalog-grid">
+            <div class="flower-card">
+                <div class="flower-image">
+                    <img src="gambar/rose.jpeg" alt="Rose Romance">
+                </div>
+                <div class="flower-info">
+                    <div class="flower-name">Rose Romance</div>
+                    <div class="flower-description">Bouquet mawar merah premium untuk ungkapan cinta yang sempurna</div>
+                    <div class="flower-price">Rp 250.000</div>
+                    <button class="buy-button" onclick="buyFlower('Rose Romance', 250000)">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="flower-card">
+                <div class="flower-image">
+                    <img src="gambar/whiterose.jpeg" alt="White Rose">
+                </div>
+                <div class="flower-info">
+                    <div class="flower-name">White Rose</div>
+                    <div class="flower-description">Rangkaian tulip warna-warni yang ceria dan mempesona</div>
+                    <div class="flower-price">Rp 300.000</div>
+                    <button class="buy-button" onclick="buyFlower('Tulip Paradise', 300000)">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="flower-card">
+                <div class="flower-image">
+                    <img src="gambar/tropical.jpg" alt="Tropical Dream">
+                </div>
+                <div class="flower-info">
+                    <div class="flower-name">Tropical Dream</div>
+                    <div class="flower-description">Bunga tropis eksotis untuk tampilan yang unik dan berbeda</div>
+                    <div class="flower-price">Rp 350.000</div>
+                    <button class="buy-button" onclick="buyFlower('Tropical Dream', 350000)">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="flower-card">
+                <div class="flower-image">
+                    <img src="gambar/sunflower.jpg" alt="Sunflower Joy">
+                </div>
+                <div class="flower-info">
+                    <div class="flower-name">Sunflower Joy</div>
+                    <div class="flower-description">Bunga matahari cerah yang membawa kebahagiaan dan energi positif</div>
+                    <div class="flower-price">Rp 200.000</div>
+                    <button class="buy-button" onclick="buyFlower('Sunflower Joy', 200000)">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="flower-card">
+                <div class="flower-image">
+                    <img src="gambar/mixed.jpg" alt="Mixed Elegance">
+                </div>
+                <div class="flower-info">
+                    <div class="flower-name">Mixed Elegance</div>
+                    <div class="flower-description">Kombinasi bunga mixed untuk tampilan elegan dan mewah</div>
+                    <div class="flower-price">Rp 400.000</div>
+                    <button class="buy-button" onclick="buyFlower('Mixed Elegance', 400000)">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="flower-card">
+                <div class="flower-image">
+                    <img src="gambar/daisy.jpg" alt="Daisy Fresh">
+                </div>
+                <div class="flower-info">
+                    <div class="flower-name">Daisy Fresh</div>
+                    <div class="flower-description">Bunga daisy segar untuk suasana natural dan menenangkan</div>
+                    <div class="flower-price">Rp 180.000</div>
+                    <button class="buy-button" onclick="buyFlower('Daisy Fresh', 180000)">Beli Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SkyBloom.Boquet. Semua hak dilindungi.</p>
+        <p>Buat setiap momen lebih berkesan dengan bunga dari kami 🌸</p>
+    </footer>
+
+    <script>
+        // Ganti dengan nomor WhatsApp admin Anda (format: 628123456789)
+        const adminWhatsApp = '628123456789';
+
+        function buyFlower(flowerName, price) {
+            const formattedPrice = price.toLocaleString('id-ID');
+            const message = `Halo SkyBloom.Boquet! Saya tertarik untuk membeli:\n\n*${flowerName}*\n\n,Mohon info lebih lanjut. Terima kasih!`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${adminWhatsApp}?text=${encodedMessage}`;
+            
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
