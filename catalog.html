@@ -297,7 +297,7 @@
 
         function buyFlower(flowerName, price) {
             const formattedPrice = price.toLocaleString('id-ID');
-            const message = `Halo SkyBloom.Boquet! Saya tertarik untuk membeli:\n\n*${flowerName}*\n\n,Mohon info lebih lanjut. Terima kasih!`;
+            const message = `Halo SkyBloom.Boquet! Saya tertarik untuk membeli:\n\n*${flowerName}*\n\nMohon info lebih lanjut. Terima kasih!`;
             const encodedMessage = encodeURIComponent(message);
             const whatsappURL = `https://wa.me/${adminWhatsApp}?text=${encodedMessage}`;
             
@@ -307,3 +307,4 @@
 </body>
 
 </html>
+
